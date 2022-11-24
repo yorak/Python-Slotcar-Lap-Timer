@@ -402,6 +402,10 @@ def main():
 
 	raceSetup = raceWidgets(root.tk)
 	raceSetup.pack(side=BOTTOM, anchor=S, fill=X, pady=8)
+
+	root.tk.bind("1", lambda event: sw.gpioTrigger())
+	root.tk.bind("2", lambda event: sw2.gpioTrigger())
+
 	
 	GPIO.setup(pins[0], GPIO.IN)
 	GPIO.add_event_detect(pins[0], GPIO.RISING, callback=triggerLap, bouncetime=1000)
