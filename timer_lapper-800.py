@@ -177,7 +177,13 @@ class raceWidgets(Frame):
 class Fullscreen_Window:
 	def __init__(self):
 		self.tk = Tk()
-		self.tk.attributes('-zoomed', False) # set this to True to zoom the window to fill the available screen
+		try:
+			# X11
+			self.tk.attributes('-zoomed', False) # set this to True to zoom the window to fill the available screen
+		except:
+			# Win / OSX
+			#self.tk.state('zoomed') # set this to True to zoom the window to fill the available screen
+			pass 
 		self.frame = Frame(self.tk)
 		self.frame.pack()
 		self.state = False  # set to True to start in fullscreen mode
