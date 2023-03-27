@@ -382,7 +382,7 @@ def main():
 	tk.Button(btnFrm, text='Start', command=StartRace, font=(MID_FONT), bg=colGreen, fg='white', highlightthickness=0, relief=tk.FLAT).pack(side=tk.BOTTOM, anchor=tk.N, fill=tk.X, pady=PAD)
 	tk.Button(btnFrm, text='Lights', command=ShowRaceLights, font=(MID_FONT), bg=colGreen, fg='white', highlightthickness=0, relief=tk.FLAT).pack(side=tk.BOTTOM, anchor=tk.N, fill=tk.X, pady=PAD)
 
-	LapRace = tk.StringVar(root.tk, value="10")
+	LapRace = tk.StringVar(root.tk, value=str(DEFAULT_RACE_LAPS))
 	def ask_lap_count(event):
 		new_laps = simpledialog.askinteger(title="Laps", prompt="Set Number of Laps", parent=root.tk, minvalue=1)
 		LapRace.set(new_laps)
