@@ -8,6 +8,9 @@ Some changes to this version:
 * Uses Arduino that sends "1" "2" "3" "4" over serial to signal passing cars.
 * Better support for multiple screen sizes.
 * Audio comes from PC, not from a buzzer.
+* Press "1", "2" etc. to manually record a lap.
+* Press "f" to toggle fullscreen.
+* Press "l" to override the race length (number of laps).
 
 The basis of the timer is derived from: http://code.activestate.com/recipes/578666-stopwatch-with-laps-in-tkinter
 
